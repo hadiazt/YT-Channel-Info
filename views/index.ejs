@@ -26,12 +26,10 @@
   <meta name="twitter:title" content="<%- INFO.author %>">
   <meta name="twitter:description" content="<%- INFO.description %>">
   <meta name="twitter:image" content="<%- INFO.authorThumbnails[INFO.authorThumbnails.length - 1].url %>">
-
   <meta property="og:title" content="<%- INFO.author %>" />
   <meta property="og:description" content="<%- INFO.description %>">
   <meta property="og:url" content="<%- INFO.authorUrl %>" />
   <meta property="og:image" content="<%- INFO.authorThumbnails[INFO.authorThumbnails.length - 1].url %>" />
-
   <meta name="theme-color" content="#f2d983">
   <meta name="description" content="<%- INFO.description %>">
   <meta name="keywords" content="yt , youtube , data , info">
@@ -87,10 +85,11 @@
     <img class="banner" src="<%- INFO.authorBanners[INFO.authorBanners.length - 1].url%>">
   </div>
 
-  <div>
+  <div class="author_sec">
     <img class="author_img" src="<%- INFO.authorThumbnails[INFO.authorThumbnails.length - 1].url %>">
     <h2 class="sans" style="color: #fff;"><a class="author_href sans" target="_blank" href="<%- INFO.authorUrl %>"></a><%- INFO.author %></a></h2>
     <h4 class="author_subsount sans">دنبال کننده <%- INFO.subscriberCount %></h4>
+    <h5 class="author_subsount sans"><%- INFO.description %></h5>
     <a class="sub_btn aviny" href="<%- INFO.authorUrl %>/?sub_confirmation=1" target="_blank">دنبال کردن</a>
   </div>
 
