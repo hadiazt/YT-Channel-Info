@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--  -->
 
-  <% if (!CHANNEL) { %>
+  <% if (!INFO) { %>
   <meta name="twitter:card" value="summary">
   <meta name="twitter:title" content="YouTube Channel Info">
   <meta name="twitter:description" content="Get Any YouTube Channel Info">
@@ -49,6 +49,8 @@
   <link rel="stylesheet" href="/css/res.css">
   </link>
 
+  <script src="https://kit.fontawesome.com/31fd7c4de0.js" crossorigin="anonymous"></script>
+
   <link rel="icon" href="<%- icon %>">
   </link>
 
@@ -81,17 +83,64 @@
     </form>
   </nav>
 
+  <% if (INFO.authorBanners[INFO.authorBanners.length - 1].url) { %>
   <div>
     <img class="banner" src="<%- INFO.authorBanners[INFO.authorBanners.length - 1].url%>">
   </div>
+  <% } %>
+
 
   <div class="author_sec">
+    <% if (INFO.authorThumbnails[INFO.authorThumbnails.length - 1].url) { %>
     <img class="author_img" src="<%- INFO.authorThumbnails[INFO.authorThumbnails.length - 1].url %>">
-    <h2 class="sans" style="color: #fff;"><a class="author_href sans" target="_blank" href="<%- INFO.authorUrl %>"></a><%- INFO.author %></a></h2>
-    <h4 class="author_subsount sans">دنبال کننده <%- INFO.subscriberCount %></h4>
-    <h5 class="author_subsount sans"><%- INFO.description %></h5>
-    <a class="sub_btn aviny" href="<%- INFO.authorUrl %>/?sub_confirmation=1" target="_blank">دنبال کردن</a>
+    <% } %>
+    <h2 class="sans author_href" style="color: #fff;"><a class="author_href sans" target="_blank" href="<%- INFO.authorUrl %>"><%- INFO.author %></a></h2>
+    <h4 class="author_subsount sans">
+      مناسب برای خانواده
+      <% if (INFO.isFamilyFriendly === true) { %>
+      <i class="fa-solid fa-check"></i>
+      <% } else { %>
+      <i class="fa-solid fa-xmark"></i>
+      <% } %>
+      | کاربر مورد تایید
+      <% if (INFO.isVerified === true) { %>
+      <i class="fa-solid fa-check"></i>
+      <% } else { %>
+      <i class="fa-solid fa-xmark"></i>
+      <% } %>
+      | آرتیست مورد تایید
+      <% if (INFO.isOfficialArtist === true) { %>
+      <i class="fa-solid fa-check"></i>
+      <% } else { %>
+      <i class="fa-solid fa-xmark"></i>
+      <% } %>
+      | دنبال کننده <%- INFO.subscriberCount %>
+
+      </br>
+    </h4>
+    <div class="channelLinks">
+      <% if (INFO.channelLinks) { %>
+
+        <% INFO.channelLinks.primaryLinks.forEach(LINK => { %>
+        <a href="<%- LINK.url %>"><img src="<%- LINK.icon %>" /></a>
+        <% }) %>
+  
+        <% INFO.channelLinks.secondaryLinks.forEach(LINK => { %>
+        <a href="<%- LINK.url %>"><img src="<%- LINK.icon %>" /></a>
+        <% }) %>
+  
+        <% } %>
+    </div>
+
+    </br>
+    <% if (INFO.description) { %> <h5 class="author_des sans"><%- INFO.description %></h5> <% } %>
+    <div>
+      <a class="sub_btn aviny" href="<%- INFO.authorUrl %>/?sub_confirmation=1" target="_blank">دنبال کردن</a>
+    </div>
   </div>
+
+
+
 
   <% } else { %>
 
