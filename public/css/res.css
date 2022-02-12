@@ -1,17 +1,37 @@
 @media (max-width: 1000px) {
-    .alarm{
+    .alarm {
         margin: 50px 150px 0 150px;
     }
 }
 
-@media (max-width: 700px) {
-    .alarm{
-        margin: 50px 50px 0 50px;
+@media (max-width:800px) {
+    .sub_btn {
+        float: none;
+        margin: 0 auto 0 auto;
+        display: block;
     }
 }
 
 @media (max-width: 700px) {
-    .alarm{
-        margin: 50px 10px 0 10px;
+    .alarm {
+        margin: 50px 50px 0 50px;
+    }
+
+}
+
+@media(max-width:500px) {
+    .author_img {
+        margin: 0 auto 0 auto;
+        display: block;
+        float: none;
+    }
+
+    .author_href {
+        text-align: center;
+    }
+
+    .channelLinks {
+        margin: 0 auto 0 auto;
+        display: block;
     }
 }
