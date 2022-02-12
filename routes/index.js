@@ -45,7 +45,7 @@ router.get("/", (req, res) => {
                 STATS: STATS[0],
                 layout: "./"
             });
-        }, 6000);
+        }, 12000);
 
 
         // setTimeout(() => {
