@@ -1,0 +1,17 @@
+@media (max-width: 1000px) {
+    .alarm{
+        margin: 50px 150px 0 150px;
+    }
+}
+
+@media (max-width: 700px) {
+    .alarm{
+        margin: 50px 50px 0 50px;
+    }
+}
+
+@media (max-width: 700px) {
+    .alarm{
+        margin: 50px 10px 0 10px;
+    }
+}

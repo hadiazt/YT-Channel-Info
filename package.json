@@ -1,0 +1,17 @@
+{
+  "name": "yt-channel-info",
+  "version": "1.0.0",
+  "description": "Get Any YouTube Channel Info",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hadi.az",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.1",
+    "yt-channel-info": "^3.0.0"
+  }
+}
