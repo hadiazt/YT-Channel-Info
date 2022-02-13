@@ -44,10 +44,12 @@ A Web App For Seening YouTube Channel Info
 
 # 🌟 Spread the word!
 
-If you want to say thank you and/or support active development of the Nava app:
+If you want to say thank you and/or support active development of the repo:
 - Add a GitHub Star to the project!
 - Join our discord servers [sosis](https://discord.gg/4zY83B9GnZ).
 - Follow my profile [hadi-az](https://github.com/hadiazt)
+
+Thanks so much for your interest in growing the reach of the repo!
 
 <br/>
 
