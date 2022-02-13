@@ -72,7 +72,7 @@
 
   <% if (ERR) { %>
   <nav class="navbar">
-    <img class="name-img" src="<%- icon %>">
+    <a href="/"><img class="name-img" src="<%- icon %>"></a>
     <form action="/" method="GET">
       <input name="ID" class="search sans" type="text" placeholder="ایدی چنل مورد نظر را وارد کنید">
     </form>
@@ -86,7 +86,7 @@
   <% } else if (!CHANNEL) { %>
 
   <nav class="navbar">
-    <img class="name-img" src="<%- icon %>">
+    <a href="/"><img class="name-img" src="<%- icon %>"></a>
     <form action="/" method="GET">
       <input name="ID" class="search sans" type="text" placeholder="ایدی چنل مورد نظر را وارد کنید">
     </form>
@@ -96,12 +96,28 @@
     لطفا ایدی چنل مورد نظر را در کادر مشخص شده وارد نمایید
   </div>
 
+
+  <div class="table">
+
+    <% VIPS.forEach(VIP => { %>
+    <a class="card" style="width: 18rem;" href="<%- VIP.authorUrl %>" target="_blank">
+      <div class="card-body" style="padding: 10px;">
+        <div>
+          <img class="author_img_2" src="<%- VIP.authorThumbnails[VIP.authorThumbnails.length-1].url%>">
+          <h3 class="author_title sans"><%- VIP.author %></h3>
+        </div>
+      </div>
+    </a>
+
+    <% }) %>
+  </div>
+
   <% } else { %>
 
   <% if (INFO && VIDEO && STATS) { %>
 
   <nav class="navbar">
-    <img class="name-img" src="<%- icon %>">
+    <a href="/"><img class="name-img" src="<%- icon %>"></a>
     <form action="/" method="GET">
       <input name="ID" class="search sans" type="text" placeholder="ایدی چنل مورد نظر را وارد کنید">
     </form>
@@ -156,6 +172,7 @@
       <a class="sub_btn aviny" href="<%- INFO.authorUrl %>/?sub_confirmation=1" target="_blank">دنبال
         کردن</a>
     </div>
+
   </div>
 
 
@@ -189,7 +206,7 @@
   <% } else { %>
 
   <nav class="navbar">
-    <img class="name-img" src="<%- icon %>">
+    <a href="/"><img class="name-img" src="<%- icon %>"></a>
     <form action="/" method="GET">
       <input name="ID" class="search sans" type="text" placeholder="ایدی چنل مورد نظر را وارد کنید">
     </form>
