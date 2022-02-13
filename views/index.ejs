@@ -8,51 +8,51 @@
   <!--  -->
 
   <% if (!INFO) { %>
-  <meta name="twitter:card" value="summary">
-  <meta name="twitter:title" content="YouTube Channel Info">
-  <meta name="twitter:description" content="Get Any YouTube Channel Info">
-  <meta name="twitter:image" content="https://www.vectorico.com/wp-content/uploads/2018/02/youtube-icon-300x300.png">
+    <meta name="twitter:card" value="summary">
+    <meta name="twitter:title" content="YouTube Channel Info">
+    <meta name="twitter:description" content="Get Any YouTube Channel Info">
+    <meta name="twitter:image" content="https://www.vectorico.com/wp-content/uploads/2018/02/youtube-icon-300x300.png">
 
-  <meta property="og:title" content="YouTube Channel Info" />
-  <meta property="og:description" content="Get Any YouTube Channel Info">
-  <meta property="og:image" content="https://www.vectorico.com/wp-content/uploads/2018/02/youtube-icon-300x300.png" />
+    <meta property="og:title" content="YouTube Channel Info" />
+    <meta property="og:description" content="Get Any YouTube Channel Info">
+    <meta property="og:image" content="https://www.vectorico.com/wp-content/uploads/2018/02/youtube-icon-300x300.png" />
 
-  <meta name="theme-color" content="#f2d983">
-  <meta name="description" content="Get Any YouTube Channel Info">
-  <meta name="keywords" content="yt , youtube , data , info">
-  <meta name="author" content="YouTube Channel Info">
-  <% } else { %>
-  <meta name="twitter:card" value="summary">
-  <meta name="twitter:title" content="<%- INFO.author %>">
-  <meta name="twitter:description" content="<%- INFO.description %>">
-  <meta name="twitter:image" content="<%- INFO.authorThumbnails[INFO.authorThumbnails.length - 1].url %>">
-  <meta property="og:title" content="<%- INFO.author %>" />
-  <meta property="og:description" content="<%- INFO.description %>">
-  <meta property="og:url" content="<%- INFO.authorUrl %>" />
-  <meta property="og:image" content="<%- INFO.authorThumbnails[INFO.authorThumbnails.length - 1].url %>" />
-  <meta name="theme-color" content="#f2d983">
-  <meta name="description" content="<%- INFO.description %>">
-  <meta name="keywords" content="yt , youtube , data , info">
-  <meta name="author" content="<%- INFO.author %>">
-  <% } %>
+    <meta name="theme-color" content="#f2d983">
+    <meta name="description" content="Get Any YouTube Channel Info">
+    <meta name="keywords" content="yt , youtube , data , info">
+    <meta name="author" content="YouTube Channel Info">
+    <% } else { %>
+      <meta name="twitter:card" value="summary">
+      <meta name="twitter:title" content="<%- INFO.author %>">
+      <meta name="twitter:description" content="<%- INFO.description %>">
+      <meta name="twitter:image" content="<%- INFO.authorThumbnails[INFO.authorThumbnails.length - 1].url %>">
+      <meta property="og:title" content="<%- INFO.author %>" />
+      <meta property="og:description" content="<%- INFO.description %>">
+      <meta property="og:url" content="<%- INFO.authorUrl %>" />
+      <meta property="og:image" content="<%- INFO.authorThumbnails[INFO.authorThumbnails.length - 1].url %>" />
+      <meta name="theme-color" content="#f2d983">
+      <meta name="description" content="<%- INFO.description %>">
+      <meta name="keywords" content="yt , youtube , data , info">
+      <meta name="author" content="<%- INFO.author %>">
+      <% } %>
 
 
-  <!--  -->
+        <!--  -->
 
-  <title>
-    <%= pageTitle %>
-  </title>
+        <title>
+          <%= pageTitle %>
+        </title>
 
-  <link rel="stylesheet" href="/css/main.css">
-  </link>
+        <link rel="stylesheet" href="/css/main.css">
+        </link>
 
-  <link rel="stylesheet" href="/css/res.css">
-  </link>
+        <link rel="stylesheet" href="/css/res.css">
+        </link>
 
-  <script src="https://kit.fontawesome.com/31fd7c4de0.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/31fd7c4de0.js" crossorigin="anonymous"></script>
 
-  <link rel="icon" href="<%- icon %>">
-  </link>
+        <link rel="icon" href="<%- icon %>">
+        </link>
 
 </head>
 
@@ -61,103 +61,111 @@
 
   <% if (!CHANNEL) { %>
 
-  <nav class="navbar">
-    <img class="name-img" src="<%- icon %>">
-    <form action="/" method="GET">
-      <input name="ID" class="search sans" type="text" placeholder="ایدی چنل مورد نظر را وارد کنید">
-    </form>
-  </nav>
+    <nav class="navbar">
+      <img class="name-img" src="<%- icon %>">
+      <form action="/" method="GET">
+        <input name="ID" class="search sans" type="text" placeholder="ایدی چنل مورد نظر را وارد کنید">
+      </form>
+    </nav>
 
-  <div class="alarm aviny">
-    لطفا ایدی چنل مورد نظر را در کادر مشخص شده وارد نمایید
-  </div>
-
-  <% } else { %>
-
-  <% if (INFO && VIDEO) { %>
-
-  <nav class="navbar">
-    <img class="name-img" src="<%- icon %>">
-    <form action="/" method="GET">
-      <input name="ID" class="search sans" type="text" placeholder="ایدی چنل مورد نظر را وارد کنید">
-    </form>
-  </nav>
-
-  <% if (INFO.authorBanners[INFO.authorBanners.length - 1].url) { %>
-  <div>
-    <img class="banner" src="<%- INFO.authorBanners[INFO.authorBanners.length - 1].url%>">
-  </div>
-  <% } %>
-
-
-  <div class="author_sec">
-    <% if (INFO.authorThumbnails[INFO.authorThumbnails.length - 1].url) { %>
-    <img class="author_img" src="<%- INFO.authorThumbnails[INFO.authorThumbnails.length - 1].url %>">
-    <% } %>
-    <h2 class="sans author_href" style="color: #fff;"><a class="author_href sans" target="_blank" href="<%- INFO.authorUrl %>"><%- INFO.author %></a></h2>
-    <h4 class="author_subsount sans">
-      مناسب برای خانواده
-      <% if (INFO.isFamilyFriendly === true) { %>
-      <i class="fa-solid fa-check"></i>
-      <% } else { %>
-      <i class="fa-solid fa-xmark"></i>
-      <% } %>
-      | کاربر مورد تایید
-      <% if (INFO.isVerified === true) { %>
-      <i class="fa-solid fa-check"></i>
-      <% } else { %>
-      <i class="fa-solid fa-xmark"></i>
-      <% } %>
-      | آرتیست مورد تایید
-      <% if (INFO.isOfficialArtist === true) { %>
-      <i class="fa-solid fa-check"></i>
-      <% } else { %>
-      <i class="fa-solid fa-xmark"></i>
-      <% } %>
-      | دنبال کننده <%- INFO.subscriberCount %>
-
-      </br>
-    </h4>
-    <div class="channelLinks">
-      <% if (INFO.channelLinks) { %>
-
-        <% INFO.channelLinks.primaryLinks.forEach(LINK => { %>
-        <a href="<%- LINK.url %>"><img src="<%- LINK.icon %>" /></a>
-        <% }) %>
-  
-        <% INFO.channelLinks.secondaryLinks.forEach(LINK => { %>
-        <a href="<%- LINK.url %>"><img src="<%- LINK.icon %>" /></a>
-        <% }) %>
-  
-        <% } %>
+    <div class="alarm aviny">
+      لطفا ایدی چنل مورد نظر را در کادر مشخص شده وارد نمایید
     </div>
 
-    </br>
-    <% if (INFO.description) { %> <h5 class="author_des sans"><%- INFO.description %></h5> <% } %>
-    <div>
-      <a class="sub_btn aviny" href="<%- INFO.authorUrl %>/?sub_confirmation=1" target="_blank">دنبال کردن</a>
-    </div>
-  </div>
+    <% } else { %>
+
+      <% if (INFO && VIDEO) { %>
+
+        <nav class="navbar">
+          <img class="name-img" src="<%- icon %>">
+          <form action="/" method="GET">
+            <input name="ID" class="search sans" type="text" placeholder="ایدی چنل مورد نظر را وارد کنید">
+          </form>
+        </nav>
+
+        <% if (INFO.authorBanners[INFO.authorBanners.length - 1].url) { %>
+          <div>
+            <img class="banner" src="<%- INFO.authorBanners[INFO.authorBanners.length - 1].url%>">
+          </div>
+          <% } %>
 
 
+            <div class="author_sec">
+              <% if (INFO.authorThumbnails[INFO.authorThumbnails.length - 1].url) { %>
+                <img class="author_img" src="<%- INFO.authorThumbnails[INFO.authorThumbnails.length - 1].url %>">
+                <% } %>
+                  <h2 class="sans author_href" style="color: #fff;"><a class="author_href sans" target="_blank"
+                      href="<%- INFO.authorUrl %>">
+                      <%- INFO.author %>
+                    </a></h2>
+                  <h4 class="author_subsount sans">
+                    دنبال کننده <%- INFO.subscriberCount %>
+                      <!-- | ریجن : <%- STATS.location %> -->
+                      | بازدید کل <%- STATS.viewCount %>
+                        | تاریخ ساخت <%- TIMEJOIN %>
+                          </br>
+
+                          <% if (INFO.isFamilyFriendly===true) { %>
+                            <i class="fa-solid fa-house-chimney-window"></i>                            <% } %>
+                              <% if (INFO.isVerified===true) { %>
+                                <i class="fa-solid fa-user-check"></i>                                <% } %>
+                                  <% if (INFO.isOfficialArtist===true) { %>
+                                    <i class="fa-solid fa-music"></i>                                    <% } %>
+                  </h4>
+                  <div class="channelLinks">
+                    <% if (INFO.channelLinks) { %>
+                      <% INFO.channelLinks.primaryLinks.forEach(LINK=> { %>
+                        <a href="<%- LINK.url %>"><img src="<%- LINK.icon %>" /></a>
+                        <% }) %>
+
+                          <% INFO.channelLinks.secondaryLinks.forEach(LINK=> { %>
+                            <a href="<%- LINK.url %>"><img src="<%- LINK.icon %>" /></a>
+                            <% }) %>
+                              <% } %>
+                  </div>
+
+                  </br>
+                  <% if (INFO.description) { %>
+                    <h5 class="author_des sans">
+                      <%- INFO.description %>
+                    </h5>
+                    <% } %>
+                      <div>
+                        <a class="sub_btn aviny" href="<%- INFO.authorUrl %>/?sub_confirmation=1" target="_blank">دنبال
+                          کردن</a>
+                      </div>
+            </div>
 
 
-  <% } else { %>
+            <div>
 
-  <nav class="navbar">
-    <img class="name-img" src="<%- icon %>">
-    <form action="/" method="GET">
-      <input name="ID" class="search sans" type="text" placeholder="ایدی چنل مورد نظر را وارد کنید">
-    </form>
-  </nav>
+              <% if(VIDEO) { %>
+                <% VIDEO.items.forEach(video=> { %>
+                  video.name
+                  <% }) %>
+                    <% } else { %>
+                      <div class="alarm aviny">
+                        هیچ محتوایی برای نمایش در چنل کاربر یافت نشد
+                      </div>
+                      <% } %>
+            </div>
 
-  <div class="alarm aviny">
-    ایدی چنل وارد شده یافت نشد
-    از درست بودن آن مطمعن شوید
-  </div>
+            <% } else { %>
 
-  <% } %>
-  <% } %>
+              <nav class="navbar">
+                <img class="name-img" src="<%- icon %>">
+                <form action="/" method="GET">
+                  <input name="ID" class="search sans" type="text" placeholder="ایدی چنل مورد نظر را وارد کنید">
+                </form>
+              </nav>
+
+              <div class="alarm aviny">
+                ایدی چنل وارد شده یافت نشد
+                از درست بودن آن مطمعن شوید
+              </div>
+
+              <% } %>
+                <% } %>
 
 
 
