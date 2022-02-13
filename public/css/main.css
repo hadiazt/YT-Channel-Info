@@ -87,23 +87,28 @@ body {
     text-align: center;
     font-size: xx-large;
 }
-.banner{
+
+.banner {
     width: 100%;
-    height:80%;
+    height: 80%;
 }
+
 .author_href {
     text-decoration: none;
     color: #fff;
 }
-.author_subsount{
+
+.author_subsount {
     color: #8d7f73;
     margin-top: -20px;
 }
-.author_des{
+
+.author_des {
     color: #8d7f73;
     margin-top: -20px;
     max-width: 800px;
 }
+
 .author_img {
     float: left;
     margin: 0 10px 0 10px;
@@ -115,7 +120,7 @@ body {
 .sub_btn {
     color: #fff;
     background-color: #cc0000;
-    border-radius:10px;
+    border-radius: 10px;
     border: none;
     float: right;
     padding: 15px;
@@ -125,8 +130,53 @@ body {
     margin: -170px 30px 0 0;
     cursor: pointer;
 }
-.author_sec{
+
+.author_sec {
     background-color: #181a1b;
     padding: 20px;
     margin-top: -5px;
+}
+
+/*  */
+.table {
+    width: auto;
+    height: auto;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* position: relative; */
+}
+
+.card {
+    /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
+    background-color: #212324;
+    margin: 20px 20px 20px 20px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    transition: .4s;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.videoThumbnail {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.video_title {
+    color: #fff;
+    text-align: center;
+}
+
+.video_info {
+    margin: 5px;
+    text-decoration: none;
+    color: #fff;
+    text-align: left;
 }
