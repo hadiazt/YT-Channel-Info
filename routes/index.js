@@ -15,16 +15,35 @@ router.get("/", (req, res) => {
     var INFO = []
     var VIDEO = []
     var STATS = []
+    var VIPS = []
+
+    const { VIP } = require('../public/VIP.json')
+
     if (!CHANNEL) {
+
+        VIP.forEach(USER => {
+            const payload = {
+                channelId: USER,
+                sortBy: 'newest',
+                channelIdType: 0,
+            }
+            ytch.getChannelInfo(payload).then((response) => {
+                VIPS.push(response)
+            })
+        });
+
+        setTimeout(() => {
         res.render("index", {
             icon: "https://www.vectorico.com/wp-content/uploads/2018/02/youtube-icon-300x300.png",
             pageTitle: "YouTube Channel Info",
             CHANNEL,
             INFO: INFO[0],
             ERR: A[0],
+            VIPS,
             layout: "./"
         });
-
+        }, 6000);
+        
         A.splice(0, A.length)
     } else {
 
