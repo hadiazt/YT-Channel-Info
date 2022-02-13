@@ -4,6 +4,10 @@ const router = new Router();
 const ytch = require('yt-channel-info')
 const momentJalali = require("jalali-moment");
 
+var A = []
+process.on('unhandledRejection', err => {
+    A.push(err);
+});
 
 router.get("/", (req, res) => {
     var CHANNEL = req.query.ID
@@ -11,15 +15,17 @@ router.get("/", (req, res) => {
     var INFO = []
     var VIDEO = []
     var STATS = []
-
     if (!CHANNEL) {
         res.render("index", {
             icon: "https://www.vectorico.com/wp-content/uploads/2018/02/youtube-icon-300x300.png",
             pageTitle: "YouTube Channel Info",
             CHANNEL,
             INFO: INFO[0],
+            ERR: A[0],
             layout: "./"
         });
+
+        A.splice(0, A.length)
     } else {
 
         const payload = {
@@ -38,32 +44,24 @@ router.get("/", (req, res) => {
             STATS.push(response)
         })
 
-        
         setTimeout(() => {
-            var TIMEJOIN = momentJalali(STATS[0].joinedDate).locale("fa").format("D MMM YYYY");
-            res.render("index", {
-                icon: "https://www.vectorico.com/wp-content/uploads/2018/02/youtube-icon-300x300.png",
-                pageTitle: "YouTube Channel Info",
-                CHANNEL,
-                INFO: INFO[0],
-                VIDEO: VIDEO[0],
-                STATS: STATS[0],
-                TIMEJOIN,
-                layout: "./"
-            });
-        }, 12000);
+            if (INFO && VIDEO && STATS) {
+                res.render("index", {
+                    icon: "https://www.vectorico.com/wp-content/uploads/2018/02/youtube-icon-300x300.png",
+                    pageTitle: "YouTube Channel Info",
+                    CHANNEL,
+                    INFO: INFO[0],
+                    VIDEO: VIDEO[0],
+                    STATS: STATS[0],
+                    ERR: A[0],
+                    momentJalali,
+                    layout: "./"
+                })
+                A.splice(0, A.length)
+            }
+        }, 6000);
 
-
-        // setTimeout(() => {
-        //     console.log(INFO);
-        //     console.log(VIDEO);
-        //     console.log(STATS);
-        // }, 6000);
     }
-
-
-
-
 
 });
 
