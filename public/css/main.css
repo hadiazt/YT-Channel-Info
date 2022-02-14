@@ -195,3 +195,18 @@ body {
     text-decoration: none;
     color: #fff;
 }
+/*  */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #181a1b;
+    color: white;
+    text-align: center;
+    /* font-size: x-large; */
+  }
+  .fotter_a{
+      text-decoration: none;
+      color: #8d7f73;
+  }
