@@ -7,6 +7,7 @@ const momentJalali = require("jalali-moment");
 var A = []
 process.on('unhandledRejection', err => {
     A.push(err);
+    console.log(err);
 });
 
 router.get("/", (req, res) => {
