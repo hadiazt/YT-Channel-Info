@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://vectorico.com/wp-content/uploads/2018/02/youtube-icon-300x300.png" width="224px" alt="Nava Music Player"/>
+  <img src="https://vectorico.com/wp-content/uploads/2018/02/youtube-icon-300x300.png" width="224px" alt="YT-Channel-Info"/>
 <br/>
 YouTube Channel Info
 </h1>
