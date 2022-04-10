@@ -1,6 +1,6 @@
 {
   "name": "yt-channel-info",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get Any YouTube Channel Info",
   "main": "app.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.1",
-    "yt-channel-info": "^3.0.0",
+    "yt-channel-info": "^3.0.3",
     "jalali-moment":"^3.3.11"
   }
 }
